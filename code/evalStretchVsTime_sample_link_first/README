@@ -1,0 +1,6 @@
+you need to have boost-system (on ubuntu "sudo apt-get install
+libboost-system-dev") and lemon graph library version 1.2+
+(http://lemon.cs.elte.hu/trac/lemon/wiki/Downloads). ubuntu (11.04)
+doesnt have lemon, so you can grab and build the source, but can just
+install into a tmp dir, and update INCLUDE variable in this Makefile
+to the appropriate location.

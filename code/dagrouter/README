@@ -1,0 +1,65 @@
+$Id: README 593 2010-11-01 11:18:56Z nguyen59 $
+
+I believe the parts that need to go into the fastpath are:
+
+1. dagrouter.cc:loop(),
+2. all of encoding2.cc and encoding3.cc, and,
+3. depending on IXP support, some/all parts of bitstring.cc.
+
+
+Overall, the router processes one packet like this:
+
+/*
+ * The "header" is actually the data portion of the UDP packet.
+ *
+ * The header contains 2 bytes of meta-data, followed by the DAG
+ * encoding:
+ *
+ *   bytes[0]: How many total bytes is the ENCODING? Thus the size of
+ *   the whole data portion should be equal to this value + 2.
+ *
+ *   4 most significant bits of bytes[1]: How many bits are IN THE
+ *   LAST byte of the encoding? This value should thus be in range
+ *   [1,8].
+ *
+ *   4 least significant bits of bytes[1]: The type of the
+ *   encoding. Currently we have two encoding types, 2 and 3.
+ *
+ *   bytes[2]: The start of the encoding.
+ *
+ * The router computes the length in BITS of the encoding, then sends:
+ *   the encoding,
+ *   the length in bits of the encoding,
+ *   the current status (up/down) of all the links.
+ *
+ * to the encoding processing function for the encoding type.
+ *
+ * All encoding processing functions should return 0 for success,
+ * non-zero for any error.
+ *
+ * If error, the router should drop the packet.
+ *
+ * Otherwise, the processing function returns one of three actions for
+ * the packet: drop, deliver, or forward.
+ *
+ * For drop and deliver, the router does not need to do anything to
+ * the header.
+ *
+ * If forward, the router should:
+ *   - Update the meta-data if the encoding has changed in length.
+ *   - Forward to link ID returned by the processing function.
+ *
+ * Done.
+ */
+
+
+The encodings use some variable-length values. These values are
+obtained by the helper function: getVarLenValFromBitstring().
+bitstring.h has the comments.
+
+
+All processEncoding functions must return 0 on success. Any non-zero
+return value is considered an error, and the router will drop the
+packet. However, to aid unit testing, processEncoding2() also uses
+positive return values for success. For production, please replace all
+positive return values with 0.

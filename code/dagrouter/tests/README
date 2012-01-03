@@ -1,0 +1,2 @@
+do "g++ -c -o bs.o bitstring.cc" in the parent dir first, then use
+bs.o when compiling the test files in here.

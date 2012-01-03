@@ -1,0 +1,10 @@
+-------------------------
+in bitstring.cc:getValFromBitstring, I wonder why you need a loop.  If it is only 32 bits, you could do it something like this:
+1. make a uint64_t x point to the first byte that contains part of the data.  The value x points to should then contain all 32 bits that you need (plus some you don't).
+2. shift by the appropriate number of bits.
+
+I guess you might have to worry about endianness there.  But it would be simpler and would get rid of the loop (so, much faster).
+
+Same thing setValIntoBitstring.
+
+-------------------------

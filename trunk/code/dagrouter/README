@@ -1,5 +1,11 @@
 $Id: README 593 2010-11-01 11:18:56Z nguyen59 $
 
+This implements a simple userspace "router" program that can send/receive
+slick packets over UDP. This was used as an example to guide the porting
+to the Super-charged Planetlab Platform "fast-path" hardware code, for
+which the instructions below are.
+
+
 I believe the parts that need to go into the fastpath are:
 
 1. dagrouter.cc:loop(),

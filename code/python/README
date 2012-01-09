@@ -1,0 +1,13 @@
+this directory contains code related to the DAG selection, encoding
+formats, and their evaluation.
+
+
+approach2.py implements the DAG selection.
+
+codec4.py implements the "Default encoding" in the paper, and
+codec2.py the "Direct encoding." (code3.py is an earlier version of
+codec4.py.)
+
+evalCombo.py is used to run the evaluation ("runeval" command) as well
+as post-process (e.g., "gencdf" command) the pickled result files to
+obtain final stats.

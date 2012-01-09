@@ -114,7 +114,7 @@ drawg = nx.draw_graphviz
 NaN = float('nan')
 
 
-Revision = '$Revision: 1034 $'
+Revision = '$Revision$'
 Id = '$Id$'
 
 

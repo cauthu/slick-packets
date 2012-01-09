@@ -3,7 +3,7 @@ import inspect
 import approach2, utils
 from codec_common import *
 
-Revision = '$Revision: 1060 $'
+Revision = '$Revision$'
 Id = '$Id$'
 
 ###################################################################3

@@ -1,7 +1,7 @@
 from codec_common import *
 import traceback
 
-Revision = '$Revision: 1060 $'
+Revision = '$Revision$'
 Id = '$Id$'
 
 ##################

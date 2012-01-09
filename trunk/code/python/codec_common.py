@@ -2,7 +2,7 @@ import bitstring
 import re
 import math
 
-Revision = '$Revision: 406 $'
+Revision = '$Revision$'
 Id = '$Id$'
 
 vnodePattern = re.compile("^([a-zA-Z0-9]+)~[a-zA-Z0-9]+$")

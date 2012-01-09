@@ -12,7 +12,7 @@ import igraph
 import utils
 
 Id = '$Id$'
-Revision = '$Revision: 575 $'
+Revision = '$Revision$'
 
 # NOTE/XXX: currently we are having the link failure happens at the
 # time when the first packet reaches the fail link. this is not

@@ -29,7 +29,7 @@ import codec3
 import codec4
 import inspect
 
-Revision = '$Revision: 1060 $'
+Revision = '$Revision$'
 Id = '$Id$'
 
 stretches = (1, )
@@ -893,6 +893,7 @@ if __name__ == '__main__':
     import sys
     if len(sys.argv) < 2:
         print 'Usage: %s cmd [cmd options]' % (sys.argv[0])
+        print '  cmd is one of: %s' % (' '.join(cmds.keys()))
         sys.exit(0)
         pass
     cmdname = sys.argv[1]

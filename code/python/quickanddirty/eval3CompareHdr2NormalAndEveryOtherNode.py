@@ -23,7 +23,7 @@ import getopt
 #import pdb
 
 
-Revision = '$Revision: 288 $'
+Revision = '$Revision$'
 Id = '$Id$'
 
 

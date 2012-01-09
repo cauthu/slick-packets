@@ -3,7 +3,7 @@ import utils
 import approach2
 import inspect
 
-Revision = '$Revision: 484 $'
+Revision = '$Revision$'
 Id = '$Id$'
 
 ###################################################################3

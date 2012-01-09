@@ -12,7 +12,7 @@ import math
 import utils
 
 Id = '$Id$'
-Revision = '$Revision: 1049 $'
+Revision = '$Revision$'
 
 # NOTE/XXX: currently we are having the link failure happens at the
 # time when the first packet reaches the fail link. this is not

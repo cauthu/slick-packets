@@ -2,7 +2,7 @@ import utils
 import math
 
 Id = '$Id$'
-Revision = '$Revision: 504 $'
+Revision = '$Revision$'
 
 def genCDF(sortedList, toFilename=None,
            bucketsize=None):

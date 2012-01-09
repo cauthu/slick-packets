@@ -27,7 +27,7 @@ import copy
 #import pdb
 import networkx as nx
 
-Revision = '$Revision: 318 $'
+Revision = '$Revision$'
 Id = '$Id$'
 
 

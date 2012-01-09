@@ -5,7 +5,7 @@ import sys
 import struct
 
 Id = '$Id$'
-Revision = '$Revision: 547 $'
+Revision = '$Revision$'
 
 
 def calculateForDAG(g, shortestPath, failureDetectionTime,

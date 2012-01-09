@@ -8,7 +8,7 @@ import utils
 import approach2
 import codec3
 
-Revision = '$Revision: 481 $'
+Revision = '$Revision$'
 Id = '$Id$'
 
 def usageAndExit(progname):

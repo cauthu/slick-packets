@@ -12,7 +12,7 @@
 # deprecated
 #versionDate = 'Wed Dec  2 11:59:13 CST 2009'
 
-Revision = '$Revision: 534 $'
+Revision = '$Revision$'
 Id = '$Id$'
 
 import sys

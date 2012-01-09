@@ -24,7 +24,7 @@ import array
 import pdb
 import codec4
 
-Revision = '$Revision: 424 $'
+Revision = '$Revision$'
 Id = '$Id$'
 
 

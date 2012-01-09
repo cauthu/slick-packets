@@ -29,7 +29,7 @@ import codec3
 import codec4
 import inspect
 
-Revision = '$Revision: 462 $'
+Revision = '$Revision$'
 Id = '$Id$'
 
 stretches = (1, )
